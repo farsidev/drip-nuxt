@@ -1,8 +1,15 @@
+/**
+ * Nuxt Drip - Drip integration for Nuxt 2
+ * @author Ali Sameni <info@farsi.dev>
+ * @copyright Farsi Inc. 2024
+ * @license MIT
+ */
+
 import initDrip from '../src/index'
 
 export default function (ctx, inject) {
   // Get drip options from nuxt.config.js
-  const options = <%= JSON.stringify(options) %>
+  const options = JSON.parse('<%= JSON.stringify(options) %>')
 
   const isProd = process.env.NODE_ENV === 'production'
   const log = {
