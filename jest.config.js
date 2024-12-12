@@ -1,12 +1,15 @@
 module.exports = {
-  testEnvironment: 'jsdom',
   transform: {
     '^.+\\.js$': 'babel-jest'
   },
   moduleFileExtensions: ['js', 'json'],
-  testMatch: ['<rootDir>/tests/**/*.test.js'],
+  testEnvironment: 'jsdom',
   collectCoverage: true,
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov'],
-  setupFiles: ['<rootDir>/tests/setup.js']
+  collectCoverageFrom: [
+    'nuxt/**/*.js',
+    'src/**/*.js'
+  ],
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons']
+  }
 }

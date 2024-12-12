@@ -1,5 +1,4 @@
-import babel from 'rollup-plugin-babel'
-import { terser } from 'rollup-plugin-terser'
+import esbuild from 'rollup-plugin-esbuild'
 
 export default {
   input: 'src/index.js',
@@ -15,9 +14,10 @@ export default {
     }
   ],
   plugins: [
-    babel({
-      exclude: 'node_modules/**'
-    }),
-    terser()
-  ]
+    esbuild({
+      target: 'es2015',
+      minify: true
+    })
+  ],
+  external: ['vue']
 }

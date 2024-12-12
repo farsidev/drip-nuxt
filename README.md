@@ -2,7 +2,7 @@
 
 A Vue.js/Nuxt.js plugin for Drip analytics integration.
 
-[![npm version](https://badge.fury.io/js/vue-drip-analytics.svg)](https://badge.fury.io/js/vue-drip-analytics)
+[![npm version](https://badge.fury.io/js/nuxt-drip.svg)](https://badge.fury.io/js/nuxt-drip)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features

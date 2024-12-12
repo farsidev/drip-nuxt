@@ -1,12 +1,44 @@
 import plugin from '../nuxt/plugin'
 
+// Mock the template literal processing that Nuxt would normally do
+jest.mock('../nuxt/plugin.js', () => {
+  const actualPlugin = jest.requireActual('../nuxt/plugin.js')
+  const wrappedPlugin = function(ctx, inject) {
+    // Mock the template string replacement
+    global.JSON.parse = jest.fn().mockReturnValue({
+      accountId: ctx.$config.dripAccountId
+    })
+    return actualPlugin.default(ctx, inject)
+  }
+  // Need to return an object with default export to match ES module structure
+  return {
+    __esModule: true,
+    default: wrappedPlugin
+  }
+})
+
 describe('Nuxt Drip Plugin', () => {
   let inject
-  const ctx = {}
+  let ctx
 
   beforeEach(() => {
-    jest.clearAllMocks()
+    // Reset DOM
+    document.body.innerHTML = ''
+
+    // Add a dummy script tag to the DOM
+    const dummyScript = document.createElement('script')
+    document.body.appendChild(dummyScript)
+
     inject = jest.fn()
+    ctx = {
+      $config: {
+        dripAccountId: 'test-account-id'
+      }
+    }
+    // Mock console methods
+    global.console.log = jest.fn()
+    global.console.warn = jest.fn()
+    // Set client-side by default
     global.process.client = true
   })
 
