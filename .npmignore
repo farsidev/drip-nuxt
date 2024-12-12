@@ -1,0 +1,13 @@
+.github
+.gitignore
+.eslintrc.js
+.prettierrc
+jest.config.js
+rollup.config.js
+coverage
+tests
+docs
+*.test.js
+*.spec.js
+.env
+.env.*

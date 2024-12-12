@@ -1,0 +1,41 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# IDE setting
+.idea
+
+# Environment
+.env
+
+# Store
+.DS_Store
+
+# Coverage
+coverage
+
+# VSCode
+.vscode
+
+# Solution
+*.suo
+
+# Template
+*.ntvs*
+
+# Project
+*.njsproj
+
+# Solution
+*.sln
+
+# Web
+*.sw?
