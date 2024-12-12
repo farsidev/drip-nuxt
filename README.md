@@ -1,18 +1,41 @@
-# Vue Drip Analytics
+# nuxt-drip
 
-A Vue.js/Nuxt.js plugin for Drip analytics integration.
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
 
-[![npm version](https://badge.fury.io/js/nuxt-drip.svg)](https://badge.fury.io/js/nuxt-drip)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+> Drip integration for Nuxt 2
 
 ## Features
 
-- Automatic script loading
-- 🎯 Event tracking
-- 🖥️ Server-side rendering support
-- 📝 TypeScript support
-- 🚀 Vue 2 and Vue 3 compatible
-- ⚡ Nuxt.js module included
-- 🔍 Production-only logging
+- 🚀 Easy integration with Drip
+- 📊 Track page views automatically
+- 👤 Identify users and track their activities
+- 🛒 E-commerce event tracking
+- 🔄 Custom event tracking
+- ⚡️ Lightweight and performant
+- 🔒 TypeScript support
 
 ## Installation
+
+1. Add `nuxt-drip` dependency to your project:
+
+```bash
+# Using npm
+npm install nuxt-drip
+```
+
+2. Add `nuxt-drip` to the `modules` section of your `nuxt.config.js` file:
+
+```js
+export default {
+  modules: ['nuxt-drip'],
+}
+```
+
+3. Configure your Drip account settings:
+
+- Go to your Drip account settings.
+- Copy your Drip account ID.
+- Paste it into the `nuxt.config.js` file.
+- Add it to the `publicRuntimeConfig` in your `nuxt.config.js` file.
