@@ -1,5 +1,5 @@
 {
-  "name": "@farsi/nuxt-drip",
+  "name": "nuxt-drip",
   "version": "1.0.0",
   "description": "Drip integration for Nuxt 2",
   "main": "dist/index.js",
