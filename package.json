@@ -1,13 +1,11 @@
 {
-  "name": "nuxt-drip",
+  "name": "drip-nuxt",
   "version": "1.0.0",
   "description": "Drip integration for Nuxt 2",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "nuxt/index.js",
+  "module": "nuxt/index.js",
   "types": "types/index.d.ts",
   "files": [
-    "dist",
-    "types",
     "nuxt"
   ],
   "scripts": {
@@ -15,14 +13,21 @@
     "test": "jest",
     "lint": "eslint --ext .js,.vue .",
     "prepare": "npm run build",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "release": "standard-version",
+    "test:coverage": "jest --coverage",
+    "lint:fix": "eslint --ext .js,.vue . --fix",
+    "prepublishOnly": "npm run test && npm run lint"
   },
   "keywords": [
     "nuxt",
     "nuxt2",
     "drip",
     "analytics",
-    "marketing"
+    "marketing",
+    "email-marketing",
+    "ecommerce",
+    "vue"
   ],
   "author": {
     "name": "Ali Sameni",
@@ -31,7 +36,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "nuxt": "^2.15.0",
+    "nuxt": "^2.0.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -45,21 +50,47 @@
     "jest": "^27.5.1",
     "jest-environment-jsdom": "^27.5.1",
     "rollup": "^2.35.1",
-    "rollup-plugin-esbuild": "^3.0.0"
+    "rollup-plugin-esbuild": "^3.0.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.5",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "jest --findRelatedTests"
+    ]
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   },
   "directories": {
     "test": "tests"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/farsidev/nuxt-drip.git"
+    "url": "git+https://github.com/farsidev/drip-nuxt.git"
   },
   "bugs": {
-    "url": "https://github.com/farsidev/nuxt-drip/issues"
+    "url": "https://github.com/farsidev/drip-nuxt/issues"
   },
-  "homepage": "https://github.com/farsidev/nuxt-drip#readme",
+  "homepage": "https://github.com/farsidev/drip-nuxt#readme",
   "engines": {
     "node": ">=14.0.0 <18.0.0",
     "npm": ">=6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/aliwesome"
   }
 }

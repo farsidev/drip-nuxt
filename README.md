@@ -1,4 +1,4 @@
-# nuxt-drip
+# drip-nuxt
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -18,18 +18,18 @@
 
 ## Installation
 
-1. Add `nuxt-drip` dependency to your project:
+1. Add `drip-nuxt` dependency to your project:
 
 ```bash
 # Using npm
-npm install nuxt-drip
+npm install drip-nuxt
 ```
 
-2. Add `nuxt-drip` to the `modules` section of your `nuxt.config.js` file:
+2. Add `drip-nuxt` to the `modules` section of your `nuxt.config.js` file:
 
 ```js
 export default {
-  modules: ['nuxt-drip'],
+  modules: ['drip-nuxt'],
 }
 ```
 
