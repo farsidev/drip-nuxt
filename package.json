@@ -1,13 +1,11 @@
 {
-  "name": "nuxt-drip",
+  "name": "drip-nuxt",
   "version": "1.0.0",
   "description": "Drip integration for Nuxt 2",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "nuxt/index.js",
+  "module": "nuxt/index.js",
   "types": "types/index.d.ts",
   "files": [
-    "dist",
-    "types",
     "nuxt"
   ],
   "scripts": {
@@ -31,7 +29,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "nuxt": "^2.15.0",
+    "nuxt": "^2.0.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -52,12 +50,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/farsidev/nuxt-drip.git"
+    "url": "git+https://github.com/farsidev/drip-nuxt.git"
   },
   "bugs": {
-    "url": "https://github.com/farsidev/nuxt-drip/issues"
+    "url": "https://github.com/farsidev/drip-nuxt/issues"
   },
-  "homepage": "https://github.com/farsidev/nuxt-drip#readme",
+  "homepage": "https://github.com/farsidev/drip-nuxt#readme",
   "engines": {
     "node": ">=14.0.0 <18.0.0",
     "npm": ">=6.0.0"
